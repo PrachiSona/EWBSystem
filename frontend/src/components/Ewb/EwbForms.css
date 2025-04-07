@@ -1,0 +1,132 @@
+/* src/components/Ewb/EwbForms.css - Common styles for all EWB forms */
+
+.ewb-form-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ewb-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0066cc;
+    font-size: 24px;
+  }
+  
+  .ewb-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ewb-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+  }
+  
+  .ewb-form-col {
+    flex: 1 0 50%;
+    padding: 0 10px;
+  }
+  
+  .ewb-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .ewb-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .ewb-input,
+  .ewb-select,
+  .ewb-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .ewb-input:focus,
+  .ewb-select:focus,
+  .ewb-textarea:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.25);
+  }
+  
+  .ewb-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 8.825l-3.9-3.9 1.414-1.414L6 6.004l2.486-2.488 1.414 1.414z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 36px;
+  }
+  
+  .ewb-textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .ewb-button {
+    padding: 12px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .ewb-button:hover {
+    background-color: #004e9e;
+  }
+  
+  .response-container {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+    overflow-x: auto;
+  }
+  
+  .response-container pre {
+    white-space: pre-wrap;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 14px;
+  }
+  
+  .error-message {
+    color: #f44336;
+    background-color: rgba(244, 67, 54, 0.1);
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .ewb-form-col {
+      flex: 1 0 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .ewb-form-container {
+      max-width: 100%;
+      margin: 20px;
+      padding: 20px;
+    }
+  }

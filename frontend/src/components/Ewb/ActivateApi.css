@@ -1,0 +1,89 @@
+/* src/components/Ewb/ActivateApi.css */
+
+.activate-api-container {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activate-api-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #0066cc;
+    font-size: 24px;
+  }
+  
+  .activate-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .activate-form-group {
+    margin-bottom: 20px;
+  }
+  
+  .activate-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .activate-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .activate-input:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.25);
+  }
+  
+  .activate-button {
+    padding: 12px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .activate-button:hover {
+    background-color: #004e9e;
+  }
+  
+  .success-message {
+    color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.1);
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    color: #f44336;
+    background-color: rgba(244, 67, 54, 0.1);
+    padding: 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 576px) {
+    .activate-api-container {
+      max-width: 100%;
+      margin: 20px;
+      padding: 20px;
+    }
+  }
