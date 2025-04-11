@@ -10,8 +10,7 @@ const serviceAccount = require('./ewaybillsystem-79be2-firebase-adminsdk-fbsvc-4
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  projectId: 'ewaybillsystem-79be2' // Explicitly providing your Project ID for Firestore
-  // databaseURL: 'YOUR_FIREBASE_DATABASE_URL' // Optional, only needed for Realtime Database
+  projectId: 'ewaybillsystem-79be2' 
 });
 
 const db = admin.firestore();
@@ -53,7 +52,7 @@ const authenticate = async (req, res, next) => {
   
       // Store the encrypted credentials in Firestore under the user's company
       const userDocRef = db.collection('users').doc(userId);
-      const companySnapshot = await userDocRef.collection('companies').limit(1).get(); // Assuming one company per user for simplicity
+      const companySnapshot = await userDocRef.collection('companies').limit(1).get(); 
   
       if (companySnapshot.empty) {
         return res.status(400).json({ error: 'No company profile found for this user.' });
@@ -107,10 +106,10 @@ const authenticate = async (req, res, next) => {
   
       const ewbAuthResponse = await axios.post('EWB_PORTAL_LOGIN_API_URL', {
         userid: ewbPortalUserId,
-        password: 'THE_ACTUAL_PASSWORD_SENT_BY_USER_DURING_ACTIVATION' // You'll need to handle this securely
+        password: 'THE_ACTUAL_PASSWORD_SENT_BY_USER_DURING_ACTIVATION' 
       });
   
-      const ewbAccessToken = ewbAuthResponse.data.authToken; // Example
+      const ewbAccessToken = ewbAuthResponse.data.authToken; 
   
       // **Make the EWB generation API call**
       const ewbApiResponse = await axios.post('EWB_PORTAL_GENERATE_API_URL', ewbData, {
@@ -134,7 +133,7 @@ const authenticate = async (req, res, next) => {
       const userId = req.user.uid;
       const { ewbNo, updateData } = req.body; // EWB number and data to update
   
-      // Retrieve EWB portal authentication details from Firestore (assuming you stored an access token)
+      // Retrieve EWB portal authentication details from Firestore 32/
       const userDocRef = db.collection('users').doc(userId);
       const companySnapshot = await userDocRef.collection('companies').limit(1).get();
   
